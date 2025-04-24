@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy Birthday</title>
+    <style>
+        body {
+            background-color: #f5a623;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            font-family: Verdana, sans-serif;
+        }
+        .container {
+            text-align: center;
+            position: relative;
+        }
+        .flower {
+            position: relative;
+            width: 120px;
+            height: 120px;
+            margin: 0 auto;
+            animation: bounce 1s infinite alternate;
+        }
+        .petals {
+            position: relative;
+            width: 120px;
+            height: 120px;
+        }
+        .petal {
+            position: absolute;
+            width: 60px;
+            height: 60px;
+            background-color: #ff69b4;
+            border-radius: 50%;
+            border: 2px solid #d1478b;
+        }
+        .petal:nth-child(1) { transform: translate(30px, 0); }
+        .petal:nth-child(2) { transform: translate(60px, 30px); }
+        .petal:nth-child(3) { transform: translate(30px, 60px); }
+        .petal:nth-child(4) { transform: translate(0, 30px); }
+        .center {
+            width: 60px;
+            height: 60px;
+            background-color: #ffff99;
+            border-radius: 50%;
+            position: absolute;
+            top: 30px;
+            left: 30px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border: 2px solid #d1478b;
+        }
+        .face {
+            font-size: 25px; /* Tamaño ajustado para que sea más proporcional */
+            font-family: sans-serif;
+            line-height: 1; /* Evita espacio extra */
+        }
+        .leaves {
+            position: absolute;
+            bottom: -40px;
+            left: 30px;
+            width: 60px;
+            height: 20px;
+        }
+        .leaf {
+            position: absolute;
+            width: 30px;
+            height: 20px;
+            background-color: #00ff00;
+            border-radius: 50% 0 50% 0;
+        }
+        .leaf:nth-child(1) { transform: translate(-0px, -5px) rotate(-20deg); }
+        .leaf:nth-child(2) { transform: translate(30px, 0) rotate(45deg); }
+        .stem {
+            position: absolute;
+            width: 10px;
+            height: 50px;
+            background-color: #00ff00;
+            left: 55px;
+            bottom: -50px;
+        }
+        @keyframes bounce {
+            0% { transform: translateY(0); }
+            100% { transform: translateY(-10px); }
+        }
+        .message {
+            margin: 80px 0 20px 0;
+            font: 16px Verdana;
+            color: #fd68b3;
+            text-shadow: 2px 2px #471d32;
+            background-color: rgba(0, 0, 0, 0.5);
+            padding: 5px 10px;
+            border-radius: 5px;
+        }
+        .play-btn {
+            font-size: 30px;
+            background: none;
+            border: none;
+            cursor: pointer;
+        }
+        #love-message {
+            display: none;
+            margin-top: 20px;
+            font: 16px Verdana;
+            color: #fd68b3;
+            text-shadow: 2px 2px #471d32;
+            background-color: rgba(0, 0, 0, 0.5);
+            padding: 5px 10px;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <div class="flower">
+        <div class="stem"></div>
+        <div class="leaves">
+            <div class="leaf"></div>
+            <div class="leaf"></div>
+        </div>
+        <div class="petals">
+            <div class="petal"></div>
+            <div class="petal"></div>
+            <div class="petal"></div>
+            <div class="petal"></div>
+        </div>
+        <div class="center">
+            <div class="face">•‿•</div>
+        </div>
+    </div>
+    <div class="message">¿Quieres ser mi novia?</div>
+    <button class="play-btn">❤️</button>
+    <div id="love-message">Te quiero mucho!!</div>
+</div>
+<script>
+    document.querySelector('.play-btn').addEventListener('click', () => {
+        document.getElementById('love-message').style.display = 'block';
+    });
+</script>
+</body>
+</html>

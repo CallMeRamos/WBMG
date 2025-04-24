@@ -1,0 +1,50 @@
+body {
+    background-color: #f5a623;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    font-family: Verdana, sans-serif;
+}
+
+.container {
+    text-align: center;
+}
+
+.message {
+    margin: 0;
+    position: absolute;
+    font: 16px Verdana;
+    color: #eee;
+    height: 25px;
+    top: calc(100vh - 30px);
+    text-shadow: 2px 2px white; /* Corregido: añadido desplazamiento Y */
+    background-color: rgba(0, 0, 0, 0.5); /* Corregido: valor válido para background-color */
+    padding: 5px 10px;
+    border-radius: 5px;
+}
+
+.gift-box {
+    font-size: 50px;
+    position: relative;
+}
+
+.play-btn {
+    font-size: 30px;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+@keyframes confetti {
+    0% { transform: translateY(0); opacity: 1; }
+    100% { transform: translateY(100vh); opacity: 0; }
+}
+
+.confetti {
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    animation: confetti 3s ease-in forwards;
+}
